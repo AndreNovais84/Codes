@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vida Feminina Saudável</title>
@@ -12,7 +13,23 @@
             box-sizing:border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
+        .hero{
+           background:url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80');
+           height:90vh;
+           background-size:cover;
+           background-position:center;
+           display:flex;
+           justify-content:center;
+           align-items:center;
+}
 
+        .overlay{
+           background:rgba(0,0,0,0.45);
+           padding:40px;
+           border-radius:20px;
+           text-align:center;
+           color:white;
+}
         body{
             background:#fff8fb;
             color:#333;
@@ -57,19 +74,27 @@
 
         .cards{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:25px;
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            gap:15px;
             margin-top:30px;
         }
 
-        .card{
+         .card{
             background:white;
             border-radius:15px;
             padding:25px;
             box-shadow:0px 4px 15px rgba(0,0,0,0.1);
             transition:0.3s;
         }
-
+        
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border-radius:10px;
+            margin-bottom:5px;
+        }
+       
         .card:hover{
             transform:translateY(-8px);
         }
@@ -130,9 +155,13 @@
 <body>
 
 <header>
-    <h1>Saúde da Mulher</h1>
-    <p>Informação, prevenção e qualidade de vida para o bem-estar feminino.</p>
-    <a href="#conteudo" class="btn">Explorar Conteúdo</a>
+    <div class="hero">
+        <div class="overlay">
+            <h1><i class="fas fa-heart-circle-plus"></i> Saúde da Mulher</h1>
+            <p>Informação, prevenção e qualidade de vida para o bem-estar feminino.</p>
+            <a href="#conteudo" class="btn">Explorar Conteúdo</a>
+        </div>
+    </div>
 </header>
 
 <nav>
@@ -147,61 +176,46 @@
 
     <div class="cards">
 
-        <div class="card" id="bemestar">
-            <h3>🌸 Bem-estar</h3>
-            <p>
-                A saúde emocional é fundamental para a qualidade de vida.
-                Reserve momentos para relaxamento, atividades físicas,
-                lazer e convivência social.
-            </p>
-        </div>
+<div class="card" id="bemestar">
+    <h3><i class="fas fa-spa"></i> Bem-estar</h3>
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80">
+    <p>A saúde emocional é fundamental para a qualidade de vida.</p>
+</div>
 
-        <div class="card" id="nutricao">
-            <h3>🥗 Nutrição</h3>
-            <p>
-                Uma alimentação equilibrada ajuda na prevenção de doenças
-                e melhora a disposição. Priorize frutas, verduras,
-                proteínas magras e hidratação adequada.
-            </p>
-        </div>
+<div class="card" id="nutricao">
+    <h3><i class="fas fa-apple-whole"></i> Nutrição</h3>
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80">
+    <p>Uma alimentação equilibrada ajuda na prevenção de doenças.</p>
+</div>
 
-        <div class="card" id="prevencao">
-            <h3>💗 Prevenção</h3>
-            <p>
-                Realize exames preventivos regularmente como mamografia,
-                Papanicolau e consultas médicas periódicas para
-                acompanhamento da saúde.
-            </p>
-        </div>
-
-    </div>
-</section>
+<div class="card" id="prevencao">
+    <h3><i class="fas fa-shield-heart"></i> Prevenção</h3>
+    <img src="https://img.magnific.com/fotos-premium/consulta-ao-ginecologista-tratamento-de-saude-da-mulher-e-diagnostico-de-doencas-do-sistema-reprodutivo-verificacao-do-exame-de-saude-feminino-ovarios-e-utero-no-consultorio-de-ginecologia_1212-5476.jpg?w=2000">
+    <p>Realize exames preventivos regularmente.</p>
+</div>
 
 <section>
     <h2>Doenças Mais Comuns Entre as Mulheres</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Câncer de Mama</h3>
-            <p>O diagnóstico precoce aumenta significativamente as chances de tratamento e recuperação.</p>
-        </div>
+    <div class="card">
+    <h3><i class="fas fa-ribbon"></i> Câncer de Mama</h3>
+    <p>O diagnóstico precoce aumenta as chances de recuperação.</p>
+</div>
 
-        <div class="card">
-            <h3>Câncer do Colo do Útero</h3>
-            <p>Exames preventivos periódicos são fundamentais para a detecção precoce.</p>
-        </div>
+<div class="card">
+    <h3><i class="fas fa-stethoscope"></i> Câncer do Colo do Útero</h3>
+    <p>Exames preventivos são fundamentais para a detecção precoce.</p>
+</div>
 
-        <div class="card">
-            <h3>Osteoporose</h3>
-            <p>Uma alimentação rica em cálcio e a prática de exercícios ajudam na prevenção.</p>
-        </div>
+<div class="card">
+    <h3><i class="fas fa-bone"></i> Osteoporose</h3>
+    <p>Exercícios físicos e cálcio ajudam na prevenção.</p>
+</div>
 
-        <div class="card">
-            <h3>Doenças Cardiovasculares</h3>
-            <p>Controlar a pressão arterial e manter hábitos saudáveis reduz os riscos.</p>
-        </div>
-    </div>
-</section>
+<div class="card">
+    <h3><i class="fas fa-heart-pulse"></i> Doenças Cardiovasculares</h3>
+    <p>Manter hábitos saudáveis reduz significativamente os riscos.</p>
+</div>
 
 <section class="links" id="links">
     <h2>Links Úteis</h2>
@@ -213,6 +227,7 @@
         <li><a href="https://bvsms.saude.gov.br" target="_blank">Biblioteca Virtual em Saúde</a></li>
     </ul>
 </section>
+
 
 <footer>
     <p>© 2026 - Saúde da Mulher</p>
